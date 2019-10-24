@@ -16,7 +16,7 @@ WORKDIR /app
 RUN go build -o hello .
 
 # Adds crontab file in the cron directory
-COPY cronjobs /etc/crontabs/root
+COPY crontab /etc/crontabs/root
 
 # Creates the log file
 RUN touch /var/log/cron.log
